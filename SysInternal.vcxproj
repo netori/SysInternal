@@ -146,7 +146,6 @@
     <ClInclude Include="Process.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CJaffaVM.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="Process.cpp" />
   </ItemGroup>

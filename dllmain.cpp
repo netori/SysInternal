@@ -56,24 +56,17 @@ void EventHandler()
         Sleep(100);
         if (GetAsyncKeyState(VK_NUMPAD1))
         {
-            //DWORD addr_CJaffaVM = *(DWORD*)((DWORD)process.hmodule + 0x3164E8);
             //Thank you GitHub CoPilot.
-            CJaffaVM sys_vm = *(CJaffaVM*)(*(DWORD*)((DWORD)process.hmodule + 0x3164E8));
+            //Get the address of the CJaffaVM object.
+            DWORD addr_CJaffaVM = *(DWORD*)((DWORD)process.hmodule + 0x3164E8);
+            //Cast the address as a pointer to a CJaffaVM object and dereference it.
+            CJaffaVM sys_vm = *(CJaffaVM*)(addr_CJaffaVM);
 
-            printf("%08X\n", sys_vm);
-            printf("%08X\n", sys_vm.CPages);
-
-            //DWORD CJaffaVM = *(DWORD*)((DWORD)process.hmodule + 0x3164E8);
-            //printf("Address of CJaffaVM instance is %08X\n", CJaffaVM);
-            //DWORD CPages = *(DWORD*)(CJaffaVM + 0x184);
-            //printf("Address of CPages instance is %08X\n", CPages);
-            //DWORD RANCE = *(DWORD*)(CPages + 0x13C0 * 4);
-            //printf("Address of RANCE instance is %08X\n", RANCE);
-            //DWORD Char_Data = *(DWORD*)(RANCE + 0x8);
-            //printf("Address of Char_Data instance is %08X\n", Char_Data);
-            //DWORD* p_HP = (DWORD*)(Char_Data + 0x40);
-            //printf("Address of HP is %08X\n", p_HP);
-            //*p_HP = 999999;
+            Character* RANCE = (Character*)(sys_vm.cpage_arr->arr[5056]->Value); //5056 should be an enum
+            printf("Rance's Character Data is at %08X\n", RANCE);
+            printf("Rance's HP is %d\n", RANCE->Cur_HP);
+            printf("Setting Rance's HP to 999999\n");
+            RANCE->Cur_HP = 999999;
         }
 
         if (GetAsyncKeyState(VK_NUMPAD0))

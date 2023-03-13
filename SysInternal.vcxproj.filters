@@ -38,9 +38,6 @@
     <ClCompile Include="Process.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CJaffaVM.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Library Include="..\..\..\Downloads\minhook-master\build\VC17\lib\Release\libMinHook.x86.lib">
