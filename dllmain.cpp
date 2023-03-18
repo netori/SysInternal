@@ -36,7 +36,7 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
 int WINAPI wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _In_ LPWSTR lpCmdLine, _In_ int nShowCmd)
 {
     UI::Setup();
-    while (UI::open)
+    while (UI::isOpen)
     {
         MSG msg;
         while (::PeekMessage(&msg, nullptr, 0U, 0U, PM_REMOVE))
@@ -44,13 +44,11 @@ int WINAPI wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, 
             ::TranslateMessage(&msg);
             ::DispatchMessage(&msg);
             if (msg.message == WM_QUIT)
-                UI::open = false;
+                UI::isOpen = false;
         }
 		UI::Render();
 	}
-    UI::DestroyImGui();
-    UI::ReleaseD3D();
-    UI::DestroyWindow();
+    UI::Cleanup();  
     return 0;
 }
 
