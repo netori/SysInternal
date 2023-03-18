@@ -5,7 +5,7 @@
 #include "CJaffaVM.h"
 
 #include "Process.h"
-#include "gui.h"
+#include "UI.h"
 
 #include "MinHook.h"
 #pragma comment(lib,"libMinHook.x86.lib")
@@ -18,7 +18,7 @@ void Shutdown(FILE* fp, std::string reason);
 DWORD WINAPI Menu();
 void EventHandler();
 
-
+#ifdef _WINDLL
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved)
 {
     switch (ul_reason_for_call)
@@ -31,7 +31,32 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
     }
     return TRUE;
 }
+#else
 
+int WINAPI wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _In_ LPWSTR lpCmdLine, _In_ int nShowCmd)
+{
+    UI::Setup();
+    while (UI::open)
+    {
+        MSG msg;
+        while (::PeekMessage(&msg, nullptr, 0U, 0U, PM_REMOVE))
+        {
+            ::TranslateMessage(&msg);
+            ::DispatchMessage(&msg);
+            if (msg.message == WM_QUIT)
+                UI::open = false;
+        }
+		UI::Render();
+	}
+    UI::DestroyImGui();
+    UI::ReleaseD3D();
+    UI::DestroyWindow();
+    return 0;
+}
+
+#endif
+
+/*
 DWORD WINAPI Menu()
 {
     AllocConsole();
@@ -42,16 +67,6 @@ DWORD WINAPI Menu()
     {
 		Shutdown(fp, "MinHook failed to initialize!");
 	}
-    try
-    {
-        UI::Setup();
-
-    }
-    catch (const std::exception& e)
-    {
-        std::cout << e.what() << std::endl;
-    }
-
 
     EventHandler();
 
@@ -98,3 +113,4 @@ void Shutdown(FILE* fp, std::string reason)
     FreeConsole();
     FreeLibraryAndExitThread(myhModule, NULL);
 }
+*/

@@ -2,7 +2,7 @@
 #include <cstdint>
 
 // Created with ReClass.NET 1.2
-namespace System 
+namespace SysVM 
 {
 
 }
