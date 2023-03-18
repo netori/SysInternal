@@ -154,15 +154,17 @@
     <ClInclude Include="imgui_impl_dx11.h" />
     <ClInclude Include="imgui_impl_win32.h" />
     <ClInclude Include="imgui_internal.h" />
+    <ClInclude Include="imgui_memory_editor.h" />
     <ClInclude Include="imstb_rectpack.h" />
     <ClInclude Include="imstb_textedit.h" />
     <ClInclude Include="imstb_truetype.h" />
+    <ClInclude Include="System4Editor.h" />
     <ClInclude Include="UI.h" />
     <ClInclude Include="Process.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CJaffaVM.cpp" />
-    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="imgui.cpp" />
     <ClCompile Include="imgui_demo.cpp" />
     <ClCompile Include="imgui_draw.cpp" />
@@ -170,6 +172,7 @@
     <ClCompile Include="imgui_impl_win32.cpp" />
     <ClCompile Include="imgui_tables.cpp" />
     <ClCompile Include="imgui_widgets.cpp" />
+    <ClCompile Include="System4Editor.cpp" />
     <ClCompile Include="UI.cpp" />
     <ClCompile Include="Process.cpp" />
   </ItemGroup>

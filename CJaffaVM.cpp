@@ -1,11 +1,11 @@
 #include "CJaffaVM.h"
 
-CPage CPageArray::getCPage(CPageIndex index)
+SysVM::CPage SysVM::CPageArray::getCPage(CPageIndex index)
 {
 	return *(CPage*)(arr[index]);
 }
 
-Character CPageArray::getCharacter(CPageIndex index)
+SysVM::Character SysVM::CPageArray::getCharacter(CPageIndex index)
 {
 	return *(Character*)((*(CPage*)(arr[index])).Value);
 }

@@ -1,5 +1,6 @@
 #include "UI.h"
-
+#include "imgui_memory_editor.h"
+#include "System4Editor.h"
 ID3D11Device* UI::pd3dDevice = nullptr;
 ID3D11DeviceContext* UI::pd3dDeviceContext = nullptr;
 IDXGISwapChain* UI::pSwapChain = nullptr;
@@ -204,6 +205,12 @@ void UI::Render()
 	//Render the menu
 	{
 		ImGui::ShowDemoWindow();
+		static MemoryEditor mem_edit_1;
+		static char data[0x10000];
+		size_t data_size = 0x10000;
+		mem_edit_1.DrawWindow("Memory Editor", data, data_size);
+		static System4Editor sys4_edit_1;
+		sys4_edit_1.Render();
 		//ImGui::Begin("ImGui", &UI::open, ImGuiWindowFlags_NoCollapse);
 		//ImGui::Text("Hello, world!");
 		//ImGui::End();
