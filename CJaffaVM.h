@@ -1,7 +1,36 @@
 #pragma once
 #include <cstdint>
 
-// Created with ReClass.NET 1.2 by KN4CK3R
+// Created with ReClass.NET 1.2
+namespace System 
+{
+
+}
+enum CPageIndex : uint32_t
+{
+	CHR_RANCE			= 5056,
+	CHR_KANAMI_KENTOU	= 5088,
+	CHR_SHIZUKA_MASOU	= 5117,
+	CHR_MARIA_CUSTARD	= 5146,
+	CHR_PATTON_MISNARGE = 5175,
+	CHR_HUBERT_LIPTON	= 5204,
+	CHR_RUSSIAN_CULLET	= 5233,
+	CHR_MAITREIA_MEICYAN = 5262,
+	CHR_RICK_ADDISON	= 5291,
+	CHR_TILDE_SHARP		= 5320,
+	CHR_CROOK_MOFUS		= 5349,
+	CHR_ALKANESE_RIZE	= 5378,
+	CHR_PITTEN_CIAO		= 5407,
+	CHR_SENHIME			= 5436,
+	CHR_MIRACLE_TOU		= 5465,
+	CHR_SANADA_TOURIN	= 5494,
+	CHR_PIGU_GELICIAM	= 5523,
+	CHR_FREYA_IDUN		= 5552,
+	CHR_ROLEX_GADRAS	= 5581,
+	CHR_ORUORE_THE_3RD	= 5610,
+	CHR_HUNTY_KALAR		= 5639,
+};
+
 
 class Character
 {
@@ -60,10 +89,11 @@ class VM_IP
 {
 public:
 	uint16_t bytecode; //0x0000
-	uint16_t arg1; //0x0002
-	uint16_t arg2; //0x0004
+	uint32_t arg;
+	//uint16_t arg1; //0x0002
+	//uint16_t arg2; //0x0004
 }; //Size: 0x0006
-static_assert(sizeof(VM_IP) == 0x6);
+static_assert(sizeof(VM_IP) == 0x8);
 
 class VM_Topmost
 {
@@ -76,6 +106,11 @@ class CPageArray
 {
 public:
 	class CPage* arr[5700]; //0x0000
+
+	CPage getCPage(CPageIndex);
+	Character getCharacter(CPageIndex);
+	//void* getCPageValue(CPageIndex
+	//getCPageValue(CPageIndex);
 }; //Size: 0x5910
 static_assert(sizeof(CPageArray) == 0x5910);
 
@@ -104,7 +139,8 @@ class CPage
 {
 public:
 	char pad_0000[8]; //0x0000
-	uint32_t Value; //0x0008
+	void* Value; //0x0008
 	char pad_000C[100]; //0x000C
+
 }; //Size: 0x0070
 static_assert(sizeof(CPage) == 0x70);

@@ -140,13 +140,31 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\Downloads\imgui-1.89.4\imgui.h" />
+    <ClInclude Include="..\..\..\Downloads\imgui-1.89.4\imgui_internal.h" />
+    <ClInclude Include="..\..\..\Downloads\imgui-1.89.4\imstb_rectpack.h" />
+    <ClInclude Include="..\..\..\Downloads\imgui-1.89.4\imstb_textedit.h" />
+    <ClInclude Include="..\..\..\Downloads\imgui-1.89.4\imstb_truetype.h" />
     <ClInclude Include="..\..\..\Downloads\minhook-master\include\MinHook.h" />
     <ClInclude Include="CJaffaVM.h" />
     <ClInclude Include="framework.h" />
+    <ClInclude Include="gui.h" />
+    <ClInclude Include="imconfig.h" />
+    <ClInclude Include="imgui_impl_dx9.h" />
+    <ClInclude Include="imgui_impl_win32.h" />
     <ClInclude Include="Process.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\Downloads\imgui-1.89.4\imgui.cpp" />
+    <ClCompile Include="..\..\..\Downloads\imgui-1.89.4\imgui_demo.cpp" />
+    <ClCompile Include="..\..\..\Downloads\imgui-1.89.4\imgui_draw.cpp" />
+    <ClCompile Include="..\..\..\Downloads\imgui-1.89.4\imgui_tables.cpp" />
+    <ClCompile Include="..\..\..\Downloads\imgui-1.89.4\imgui_widgets.cpp" />
+    <ClCompile Include="CJaffaVM.cpp" />
     <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="gui.cpp" />
+    <ClCompile Include="imgui_impl_dx9.cpp" />
+    <ClCompile Include="imgui_impl_win32.cpp" />
     <ClCompile Include="Process.cpp" />
   </ItemGroup>
   <ItemGroup>
