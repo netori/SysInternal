@@ -1,24 +1,9 @@
-// dllmain.cpp : Defines the entry point for the DLL application.
-#include <iostream>
-#include <cstdio>
-#include <cstdint>
-#include "CJaffaVM.h"
-
-#include "Process.h"
 #include "UI.h"
 
-#include "MinHook.h"
-#pragma comment(lib,"libMinHook.x86.lib")
-
-//typedef long(__stdcall* present)(IDXGISwapChain*, UINT, UINT);
-
-HMODULE myhModule;
-DWORD WINAPI EjectThread(LPVOID);
-void Shutdown(FILE* fp, std::string reason);
-DWORD WINAPI Menu();
-void EventHandler();
+DWORD WINAPI Init();
 
 #ifdef _WINDLL
+HMODULE myhModule;
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved)
 {
     switch (ul_reason_for_call)
@@ -26,33 +11,28 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
     case DLL_PROCESS_ATTACH:
         DisableThreadLibraryCalls(hModule);
         myhModule = hModule;
-        CreateThread(NULL, NULL, reinterpret_cast<LPTHREAD_START_ROUTINE>(Menu), NULL, NULL, NULL);
+        CreateThread(NULL, NULL, reinterpret_cast<LPTHREAD_START_ROUTINE>(Init), NULL, NULL, NULL);
         break;
     }
     return TRUE;
 }
 #else
-
 int WINAPI wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _In_ LPWSTR lpCmdLine, _In_ int nShowCmd)
 {
+    Init();
+}
+#endif
+
+DWORD WINAPI Init()
+{
     UI::Setup();
-    while (UI::isOpen)
-    {
-        MSG msg;
-        while (::PeekMessage(&msg, nullptr, 0U, 0U, PM_REMOVE))
-        {
-            ::TranslateMessage(&msg);
-            ::DispatchMessage(&msg);
-            if (msg.message == WM_QUIT)
-                UI::isOpen = false;
-        }
-		UI::Render();
-	}
-    UI::Cleanup();  
+    UI::Render();
+    UI::Cleanup();
+#ifdef _WINDLL
+    FreeLibraryAndExitThread(myhModule, NULL);
+#endif
     return 0;
 }
-
-#endif
 
 /*
 DWORD WINAPI Menu()

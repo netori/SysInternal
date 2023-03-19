@@ -1,7 +1,8 @@
 #pragma once
 
+#define WIN32_LEAN_AND_MEAN    
+#include <windows.h>
 #include <stdexcept>
-#include <Windows.h>
 
 #include <d3d11.h>
 #pragma comment (lib, "d3d11.lib")
@@ -22,7 +23,8 @@ private:
 	static HWND hWnd;
 	static WNDPROC originalWndProc;
 	static WNDCLASSEX windowClass;
-	static ImVec4 clear_color;
+
+	static constexpr float clear_color_with_alpha[4] = { 0.45f * 1.00f, 0.55f * 1.00f, 0.60 * 1.00f, 1.00f };
 
 	static void SetupWindow(const wchar_t*);
 	static void DestroyWindow();
@@ -32,7 +34,6 @@ private:
 	static void ReleaseDeviceD3D();
 	static void CreateRenderTarget();
 	static void CleanupRenderTarget();
-	static void Present();
 	
 	static LRESULT WINAPI WndProc(HWND, UINT, WPARAM, LPARAM);
 

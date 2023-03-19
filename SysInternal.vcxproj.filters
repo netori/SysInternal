@@ -16,9 +16,6 @@
     <Filter Include="Lib">
       <UniqueIdentifier>{f3e598a7-55d5-4a4a-b5c4-2208bb90549b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="imgui">
-      <UniqueIdentifier>{94109482-991c-42b8-a653-8393f126b52a}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\System">
       <UniqueIdentifier>{1f175f30-94e8-4914-9082-e8a7bbefc13f}</UniqueIdentifier>
     </Filter>
@@ -28,6 +25,12 @@
     <Filter Include="Header Files\GUI">
       <UniqueIdentifier>{d095f7f8-1f32-4e71-948a-67217761f975}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\System">
+      <UniqueIdentifier>{b4291b56-1de1-4a3f-8ee0-26ca973da182}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ImGui">
+      <UniqueIdentifier>{94109482-991c-42b8-a653-8393f126b52a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -36,81 +39,90 @@
     <ClInclude Include="..\..\..\Downloads\minhook-master\include\MinHook.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Process.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="UI.h">
       <Filter>Header Files\GUI</Filter>
     </ClInclude>
-    <ClInclude Include="CJaffaVM.h">
+    <ClInclude Include="System4VM.h">
       <Filter>Header Files\System</Filter>
     </ClInclude>
     <ClInclude Include="imgui_internal.h">
-      <Filter>imgui</Filter>
+      <Filter>ImGui</Filter>
     </ClInclude>
     <ClInclude Include="imstb_rectpack.h">
-      <Filter>imgui</Filter>
+      <Filter>ImGui</Filter>
     </ClInclude>
     <ClInclude Include="imstb_textedit.h">
-      <Filter>imgui</Filter>
+      <Filter>ImGui</Filter>
     </ClInclude>
     <ClInclude Include="imstb_truetype.h">
-      <Filter>imgui</Filter>
+      <Filter>ImGui</Filter>
     </ClInclude>
     <ClInclude Include="imconfig.h">
-      <Filter>imgui</Filter>
+      <Filter>ImGui</Filter>
     </ClInclude>
     <ClInclude Include="imgui.h">
-      <Filter>imgui</Filter>
+      <Filter>ImGui</Filter>
     </ClInclude>
     <ClInclude Include="imgui_impl_dx11.h">
-      <Filter>imgui</Filter>
+      <Filter>ImGui</Filter>
     </ClInclude>
     <ClInclude Include="imgui_impl_win32.h">
-      <Filter>imgui</Filter>
+      <Filter>ImGui</Filter>
     </ClInclude>
     <ClInclude Include="imgui_memory_editor.h">
-      <Filter>imgui</Filter>
+      <Filter>ImGui</Filter>
     </ClInclude>
     <ClInclude Include="System4Editor.h">
       <Filter>Header Files\GUI</Filter>
     </ClInclude>
+    <ClInclude Include="Process.h">
+      <Filter>Header Files\System</Filter>
+    </ClInclude>
+    <ClInclude Include="CPage.h">
+      <Filter>Header Files\System</Filter>
+    </ClInclude>
+    <ClInclude Include="Interface.h">
+      <Filter>Header Files\GUI</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Process.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="CJaffaVM.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="imgui_tables.cpp">
-      <Filter>imgui</Filter>
+      <Filter>ImGui</Filter>
     </ClCompile>
     <ClCompile Include="imgui_widgets.cpp">
-      <Filter>imgui</Filter>
+      <Filter>ImGui</Filter>
     </ClCompile>
     <ClCompile Include="imgui.cpp">
-      <Filter>imgui</Filter>
+      <Filter>ImGui</Filter>
     </ClCompile>
     <ClCompile Include="imgui_demo.cpp">
-      <Filter>imgui</Filter>
+      <Filter>ImGui</Filter>
     </ClCompile>
     <ClCompile Include="imgui_draw.cpp">
-      <Filter>imgui</Filter>
+      <Filter>ImGui</Filter>
     </ClCompile>
     <ClCompile Include="imgui_impl_dx11.cpp">
-      <Filter>imgui</Filter>
+      <Filter>ImGui</Filter>
     </ClCompile>
     <ClCompile Include="imgui_impl_win32.cpp">
-      <Filter>imgui</Filter>
+      <Filter>ImGui</Filter>
     </ClCompile>
     <ClCompile Include="System4Editor.cpp">
       <Filter>Source Files\GUI</Filter>
     </ClCompile>
     <ClCompile Include="UI.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="System4VM.cpp">
+      <Filter>Source Files\System</Filter>
+    </ClCompile>
+    <ClCompile Include="Process.cpp">
+      <Filter>Source Files\System</Filter>
+    </ClCompile>
+    <ClCompile Include="Interface.cpp">
       <Filter>Source Files\GUI</Filter>
     </ClCompile>
   </ItemGroup>
