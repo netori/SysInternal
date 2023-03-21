@@ -3,16 +3,21 @@
 #include "imgui.h"
 #include "imgui_memory_editor.h"
 #include "Interface.h"
+#include "System4VM.h"
 
 namespace System4Editor
 {
-	static bool isSetup = false;
+	struct ExampleAppLog;
 	static bool isOpen = true;
-	static bool my_tool_active = true;
-	static bool show_system4_editor = true;
-	static bool isMemoryEditorOpen = false;
-	bool Show();
-	void Render();
-	void Setup();
-	
+
+	static bool show_main_window = true;
+	static bool show_constrained_window = false;
+	static bool show_app_log = false;
+	static bool show_app_about = false;
+
+	bool Render();
+	void ShowMainWindow();
+	void ShowExampleAppConstrainedResize(bool*);
+	void ShowExampleAppLog(bool*);
+
 };

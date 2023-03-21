@@ -7,8 +7,7 @@ IDXGISwapChain* UI::pSwapChain = nullptr;
 ID3D11RenderTargetView* UI::pMainRenderTargetView = nullptr;
 
 HWND UI::hWnd = nullptr;
-WNDPROC UI::originalWndProc = nullptr;
-WNDCLASSEX UI::windowClass = { };
+WNDCLASSEX UI::windowClass = { 0 };
 bool UI::isOpen = true;
 
 
@@ -64,7 +63,7 @@ void UI::SetupWindow(const wchar_t* windowClassName)
 void UI::DestroyWindow()
 {
 	::DestroyWindow(UI::hWnd);
-	UnregisterClass(reinterpret_cast<LPCWSTR>(UI::windowClass.lpszClassName), windowClass.hInstance);
+	UnregisterClass(static_cast<LPCWSTR>(UI::windowClass.lpszClassName), windowClass.hInstance);
 }
 
 void UI::CreateDeviceD3D(HWND hWnd)
@@ -203,8 +202,6 @@ void UI::DestroyImGui()
 	ImGui_ImplDX11_Shutdown();
 	ImGui_ImplWin32_Shutdown();
 	ImGui::DestroyContext();
-	// Restore the original window procedure
-	SetWindowLongPtr(hWnd, GWLP_WNDPROC, reinterpret_cast<LONG_PTR>(UI::originalWndProc));
 }
 
 void UI::Render()
@@ -227,12 +224,12 @@ void UI::Render()
 		// Draw the ImGuiFrame to backbuffer.
 		{
 			ImGui::ShowDemoWindow();
-			if (!System4Editor::Show())
+			if (!System4Editor::Render())
 				UI::isOpen = false;
 		}
 		// End the ImGui frame.
 		ImGui::EndFrame();
-		// Present the shit.
+		// Render the ImGui frame.
 		ImGui::Render();
 		pd3dDeviceContext->OMSetRenderTargets(1, &pMainRenderTargetView, nullptr);
 		pd3dDeviceContext->ClearRenderTargetView(pMainRenderTargetView, UI::clear_color_with_alpha);
@@ -244,6 +241,7 @@ void UI::Render()
 			ImGui::UpdatePlatformWindows();
 			ImGui::RenderPlatformWindowsDefault();
 		}
+		// Present the shit.
 		pSwapChain->Present(1, 0);
 	}
 }

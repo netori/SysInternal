@@ -7,7 +7,7 @@ namespace mystuff {
 	public:
 		T GetValue() 
 		{ 
-			return *reinterpret_cast<DWORD*>(0x083AF3E0);//reinterpret_cast<T*> Value; 
+			return *static_cast<T*>(Value);
 		}
 	private:
 		char pad_0000[8]; //0x0000

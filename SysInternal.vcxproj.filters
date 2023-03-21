@@ -31,12 +31,15 @@
     <Filter Include="ImGui">
       <UniqueIdentifier>{94109482-991c-42b8-a653-8393f126b52a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Memory">
+      <UniqueIdentifier>{d9f13930-8d83-40f0-b9b6-2f3b435b3c80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Memory">
+      <UniqueIdentifier>{1e7e0344-c0b8-4e8a-b769-44d3e2346729}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\Downloads\minhook-master\include\MinHook.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="UI.h">
@@ -69,19 +72,25 @@
     <ClInclude Include="imgui_impl_win32.h">
       <Filter>ImGui</Filter>
     </ClInclude>
-    <ClInclude Include="imgui_memory_editor.h">
-      <Filter>ImGui</Filter>
-    </ClInclude>
     <ClInclude Include="System4Editor.h">
       <Filter>Header Files\GUI</Filter>
-    </ClInclude>
-    <ClInclude Include="Process.h">
-      <Filter>Header Files\System</Filter>
     </ClInclude>
     <ClInclude Include="CPage.h">
       <Filter>Header Files\System</Filter>
     </ClInclude>
     <ClInclude Include="Interface.h">
+      <Filter>Header Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Data.h">
+      <Filter>Header Files\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Downloads\minhook-master\include\MinHook.h">
+      <Filter>Header Files\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="Pattern.h">
+      <Filter>Header Files\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui_memory_editor.h">
       <Filter>Header Files\GUI</Filter>
     </ClInclude>
   </ItemGroup>
@@ -119,11 +128,14 @@
     <ClCompile Include="System4VM.cpp">
       <Filter>Source Files\System</Filter>
     </ClCompile>
-    <ClCompile Include="Process.cpp">
-      <Filter>Source Files\System</Filter>
-    </ClCompile>
     <ClCompile Include="Interface.cpp">
       <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Data.cpp">
+      <Filter>Source Files\Memory</Filter>
+    </ClCompile>
+    <ClCompile Include="Pattern.cpp">
+      <Filter>Source Files\Memory</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -21,7 +21,6 @@ private:
 	static ID3D11RenderTargetView* pMainRenderTargetView;
 
 	static HWND hWnd;
-	static WNDPROC originalWndProc;
 	static WNDCLASSEX windowClass;
 
 	static constexpr float clear_color_with_alpha[4] = { 0.45f * 1.00f, 0.55f * 1.00f, 0.60 * 1.00f, 1.00f };

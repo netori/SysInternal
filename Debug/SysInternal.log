@@ -1,12 +1,3 @@
-﻿  Interface.cpp
-C:\Users\h8940\Documents\GitHub\SysInternal\CPage.h(10,11): error C2100: illegal indirection
-C:\Users\h8940\Documents\GitHub\SysInternal\CPage.h(16,3): message : see reference to class template instantiation 'mystuff::CPage<T>' being compiled
-  System4Editor.cpp
-C:\Users\h8940\Documents\GitHub\SysInternal\CPage.h(10,11): error C2100: illegal indirection
-C:\Users\h8940\Documents\GitHub\SysInternal\CPage.h(16,3): message : see reference to class template instantiation 'mystuff::CPage<T>' being compiled
-C:\Users\h8940\Documents\GitHub\SysInternal\System4Editor.cpp(31,36): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-  UI.cpp
-C:\Users\h8940\Documents\GitHub\SysInternal\UI.h(27,105): warning C4305: 'initializing': truncation from 'double' to 'const float'
-C:\Users\h8940\Documents\GitHub\SysInternal\CPage.h(10,11): error C2100: illegal indirection
-C:\Users\h8940\Documents\GitHub\SysInternal\CPage.h(16,3): message : see reference to class template instantiation 'mystuff::CPage<T>' being compiled
-  Generating Code...
+﻿  System4Editor.cpp
+C:\Users\h8940\Documents\GitHub\SysInternal\System4Editor.cpp(175,36): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  SysInternal.vcxproj -> C:\Users\h8940\Documents\GitHub\SysInternal\Debug\SysInternal.exe

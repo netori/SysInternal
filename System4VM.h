@@ -7,9 +7,29 @@
 // Created with ReClass.NET 1.2
 namespace System4VM 
 {
+	class CJaffaVM
+	{
+	public:
+		char pad_0000[16]; //0x0000
+		uint32_t mod_base; //0x0010
+		char pad_0014[152]; //0x0014
+		class CFunctionArray* func_arr; //0x00AC
+		char pad_00B0[208]; //0x00B0
+		class CJaffaVM* cjaffavm; //0x0180
+		class CPageArray* cpage_arr; //0x0184
+		char pad_0188[156]; //0x0188
+		class VM_IP* vm_ip; //0x0224
+		class BytecodeSegment* bytecode_segment; //0x0228
+		char pad_022C[8]; //0x022C
+		uint32_t exit_condition; //0x0234
+		char pad_0238[24]; //0x0238
+		class VM_Topmost* vm_topmost; //0x0250
+		char pad_0254[1028]; //0x0254
+		class VM_Callstack* vm_callstack; //0x0658
+		char pad_065C[3236]; //0x065C
+	}; //Size: 0x1300
+	static_assert(sizeof(CJaffaVM) == 0x1300);
 
-	static const HMODULE moduleBase = GetModuleHandle(NULL);
-	//CJaffaVM a = *reinterpret_cast<CJaffaVM*>(moduleBase+0x3164E8);
 	enum CPageIndex : uint32_t
 	{
 		CUR_GOLD			= 2270,
@@ -36,7 +56,6 @@ namespace System4VM
 		CHR_ORUORE_THE_3RD	= 5610,
 		CHR_HUNTY_KALAR		= 5639,
 	};
-
 
 	class Character
 	{
@@ -114,10 +133,10 @@ namespace System4VM
 	static_assert(sizeof(VM_Callstack) == 0x4);
 
 	class CPage
-	{
+	{ 
 	public:
 		char pad_0000[8]; //0x0000
-		void* Value; //0x0008
+		uintptr_t* Value; //0x0008
 		char pad_000C[100]; //0x000C
 
 	}; //Size: 0x0070

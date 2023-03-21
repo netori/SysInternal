@@ -1,7 +1,5 @@
 c:\users\h8940\documents\github\sysinternal\release\vc143.pdb
 c:\users\h8940\documents\github\sysinternal\release\process.obj
-c:\users\h8940\documents\github\sysinternal\release\ui.obj
-c:\users\h8940\documents\github\sysinternal\release\system4editor.obj
 c:\users\h8940\documents\github\sysinternal\release\imgui_widgets.obj
 c:\users\h8940\documents\github\sysinternal\release\imgui_tables.obj
 c:\users\h8940\documents\github\sysinternal\release\imgui_impl_win32.obj
@@ -10,9 +8,12 @@ c:\users\h8940\documents\github\sysinternal\release\imgui_draw.obj
 c:\users\h8940\documents\github\sysinternal\release\imgui_demo.obj
 c:\users\h8940\documents\github\sysinternal\release\imgui.obj
 c:\users\h8940\documents\github\sysinternal\release\main.obj
-c:\users\h8940\documents\github\sysinternal\release\cjaffavm.obj
+c:\users\h8940\documents\github\sysinternal\release\ui.obj
+c:\users\h8940\documents\github\sysinternal\release\system4editor.obj
 c:\users\h8940\documents\github\sysinternal\release\system4vm.obj
 c:\users\h8940\documents\github\sysinternal\release\interface.obj
+c:\users\h8940\documents\github\sysinternal\release\pattern.obj
+c:\users\h8940\documents\github\sysinternal\release\data.obj
 c:\users\h8940\documents\github\sysinternal\release\sysinternal.ipdb
 c:\users\h8940\documents\github\sysinternal\release\sysinternal.iobj
 c:\users\h8940\documents\github\sysinternal\release\sysinternal.dll

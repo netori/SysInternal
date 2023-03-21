@@ -148,7 +148,9 @@
   <ItemGroup>
     <ClInclude Include="..\..\..\Downloads\minhook-master\include\MinHook.h" />
     <ClInclude Include="CPage.h" />
+    <ClInclude Include="Data.h" />
     <ClInclude Include="Interface.h" />
+    <ClInclude Include="Pattern.h" />
     <ClInclude Include="System4VM.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="imconfig.h" />
@@ -162,10 +164,11 @@
     <ClInclude Include="imstb_truetype.h" />
     <ClInclude Include="System4Editor.h" />
     <ClInclude Include="UI.h" />
-    <ClInclude Include="Process.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Data.cpp" />
     <ClCompile Include="Interface.cpp" />
+    <ClCompile Include="Pattern.cpp" />
     <ClCompile Include="System4VM.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="imgui.cpp" />
@@ -177,7 +180,6 @@
     <ClCompile Include="imgui_widgets.cpp" />
     <ClCompile Include="System4Editor.cpp" />
     <ClCompile Include="UI.cpp" />
-    <ClCompile Include="Process.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="..\..\..\Downloads\minhook-master\build\VC17\lib\Release\libMinHook.x86.lib" />
