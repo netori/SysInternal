@@ -1,0 +1,22 @@
+\hypertarget{_interface_8h_source}{}\doxysection{Interface.\+h}
+\label{_interface_8h_source}\index{C:/Users/h8940/Documents/GitHub/SysInternal/Interface.h@{C:/Users/h8940/Documents/GitHub/SysInternal/Interface.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ This\ header\ is\ the\ interface\ between\ GUI\ and\ the\ backend.}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Most\ functions\ are\ just\ wrappers\ for\ the\ backend.}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_interface}{Interface}}}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00008\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{static}\ uintptr\_t\ \mbox{\hyperlink{class_interface_aac7e01dcb19ec7b35b9c78bf97613444}{GetCJaffaVM}}();}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{static}\ uintptr\_t\ GetCPage(\textcolor{keywordtype}{int});}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{wchar\_t}*\ GetCPageName(\textcolor{keywordtype}{int});}
+\DoxyCodeLine{00012\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{comment}{//static\ const\ wchar\_t*\ moduleName\ =\ L"{}System4VM.dll"{};}}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{comment}{//static\ const\ HMODULE\ moduleBase\ =\ GetModuleHandle(NULL);}}
+\DoxyCodeLine{00016\ \};}
+
+\end{DoxyCode}

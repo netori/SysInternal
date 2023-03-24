@@ -1,0 +1,24 @@
+\hypertarget{_c_page_8h_source}{}\doxysection{CPage.\+h}
+\label{_c_page_8h_source}\index{C:/Users/h8940/Documents/GitHub/SysInternal/CPage.h@{C:/Users/h8940/Documents/GitHub/SysInternal/CPage.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{keyword}{namespace\ }mystuff\ }
+\DoxyCodeLine{00004\ \{}
+\DoxyCodeLine{00005\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00006\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmystuff_1_1_c_page}{CPage}}}
+\DoxyCodeLine{00007\ \ \ \ \ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ T\ GetValue()\ }
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \{\ }
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{static\_cast<}T*\textcolor{keyword}{>}(Value);}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ pad\_0000[8];\ \textcolor{comment}{//0x0000}}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ T*\ Value;\ \textcolor{comment}{//0x0008}}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ pad\_000C[100];\ \textcolor{comment}{//0x000C}}
+\DoxyCodeLine{00017\ \ \ \ \ \};}
+\DoxyCodeLine{00018\ \}}
+
+\end{DoxyCode}

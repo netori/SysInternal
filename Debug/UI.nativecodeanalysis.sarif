@@ -1,0 +1,303 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "C33010",
+          "message": {
+            "text": "Unchecked lower bound for enum data_format used as index.."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui_memory_editor.h"
+                },
+                "region": {
+                  "startLine": 560,
+                  "startColumn": 9,
+                  "endLine": 560,
+                  "endColumn": 33
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MemoryEditor::DataFormatGetDesc",
+                  "decoratedName": "?DataFormatGetDesc@MemoryEditor@@QBEPBDW4DataFormat@1@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui_memory_editor.h"
+                          },
+                          "region": {
+                            "startLine": 556,
+                            "startColumn": 17
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui_memory_editor.h"
+                          },
+                          "region": {
+                            "startLine": 558,
+                            "startColumn": 21
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui_memory_editor.h"
+                          },
+                          "region": {
+                            "startLine": 558,
+                            "startColumn": 31
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui_memory_editor.h"
+                          },
+                          "region": {
+                            "startLine": 559,
+                            "startColumn": 9
+                          }
+                        },
+                        "message": {
+                          "text": "Branching based on condition '0 <= data_format'. 'false' branch is taken\nEnum value 'data_format' is checked for upper bound."
+                        }
+                      },
+                      "kinds": [
+                        "Combination"
+                      ],
+                      "importance": "essential"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui_memory_editor.h"
+                          },
+                          "region": {
+                            "startLine": 559,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui_memory_editor.h"
+                          },
+                          "region": {
+                            "startLine": 559,
+                            "startColumn": 9
+                          }
+                        },
+                        "message": {
+                          "text": "Branching based on condition '0'. 'false' branch is taken"
+                        }
+                      },
+                      "kinds": [
+                        "Branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui_memory_editor.h"
+                          },
+                          "region": {
+                            "startLine": 559,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui_memory_editor.h"
+                          },
+                          "region": {
+                            "startLine": 559,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui_memory_editor.h"
+                          },
+                          "region": {
+                            "startLine": 560,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.35.32216.1",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui_memory_editor.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "d6c1d6acd9c72b7e4880406a8b66349805028fea91cd338aecb2eb85cbf72cf3"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/h8940/documents/github/sysinternal/ui.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "sha-256": "46f5478e7d3688ef500b4b1285ab82c40f3e29259e7a34f39c699d0ed4012e18"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/h8940/documents/github/sysinternal/ui.h"
+          },
+          "hashes": {
+            "sha-256": "389550255c27af1ca15ba7573d65367b8716e29f952ff3761bc2285e4f45fc17"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/h8940/documents/github/sysinternal/imgui.h"
+          },
+          "hashes": {
+            "sha-256": "d716e3ff359d27cc6755608aae4ff779efac837b197555d64090b994c245d108"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/h8940/documents/github/sysinternal/imconfig.h"
+          },
+          "hashes": {
+            "sha-256": "8d887055ad9b411a677d7c873f693a511522eb9473353f563b597db9142398c9"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/h8940/documents/github/sysinternal/imgui_impl_win32.h"
+          },
+          "hashes": {
+            "sha-256": "9e5e40d0b625cca0eb04a59b359c6e20d39cdaab2210bd90f7e20bb54c5dd77c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/h8940/documents/github/sysinternal/imgui_impl_dx11.h"
+          },
+          "hashes": {
+            "sha-256": "d5b99b5ce6d8f6581a5e3b78b2d1c04ceb979df063852dbd46c487c8bb5e40c1"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/h8940/documents/github/sysinternal/system4editor.h"
+          },
+          "hashes": {
+            "sha-256": "8efaee72c383ee34056c1209855f895801edf373c72b098cd55423ad43346eb2"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/h8940/documents/github/sysinternal/interface.h"
+          },
+          "hashes": {
+            "sha-256": "081cd4ce44f2a0552dab1d7e01afd96f7d92d872bdaa431ff1e364f992997b79"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/h8940/documents/github/sysinternal/framework.h"
+          },
+          "hashes": {
+            "sha-256": "188c9e04096a0a539b82a8c61784d69fd7334dea8066c181f31b429024974384"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/h8940/documents/github/sysinternal/cpage.h"
+          },
+          "hashes": {
+            "sha-256": "b3147170899da222ccf9820e46d3e8b2bcd8d9f92815fcc52b6760a775a86be0"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/h8940/documents/github/sysinternal/system4vm.h"
+          },
+          "hashes": {
+            "sha-256": "2ca5607d3aac947e3b871e59d7e6e8f7b728a9328864c87304beb0cf2ca8383d"
+          }
+        }
+      ]
+    }
+  ]
+}

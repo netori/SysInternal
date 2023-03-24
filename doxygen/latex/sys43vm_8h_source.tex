@@ -1,0 +1,154 @@
+\hypertarget{sys43vm_8h_source}{}\doxysection{sys43vm.\+h}
+\label{sys43vm_8h_source}\index{C:/Users/h8940/Documents/GitHub/SysInternal/sys43vm.h@{C:/Users/h8940/Documents/GitHub/SysInternal/sys43vm.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <Windows.h>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ Created\ with\ ReClass.NET\ 1.2}}
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }sys43vm}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{const}\ uint32\_t\ vmFileOffset\ =\ 0x3164E8;}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{const}\ uint32\_t\ hMod\ =\ std::bit\_cast<uint32\_t>(GetModuleHandle(NULL));}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{enum}\ CPageIndex\ :\ uint32\_t}
+\DoxyCodeLine{00012\ \ \ \ \ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ CUR\_GOLD\ =\ 2270,}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ CUR\_MONKEY\_ORBS\ =\ 2319,}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ CHR\_RANCE\ =\ 5056,}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ CHR\_KANAMI\_KENTOU\ =\ 5088,}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ CHR\_SHIZUKA\_MASOU\ =\ 5117,}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ CHR\_MARIA\_CUSTARD\ =\ 5146,}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ CHR\_PATTON\_MISNARGE\ =\ 5175,}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ CHR\_HUBERT\_LIPTON\ =\ 5204,}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ CHR\_RUSSIAN\_CULLET\ =\ 5233,}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ CHR\_MAITREIA\_MEICYAN\ =\ 5262,}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ CHR\_RICK\_ADDISON\ =\ 5291,}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ CHR\_TILDE\_SHARP\ =\ 5320,}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ CHR\_CROOK\_MOFUS\ =\ 5349,}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ CHR\_ALKANESE\_RIZE\ =\ 5378,}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ CHR\_PITTEN\_CIAO\ =\ 5407,}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ CHR\_SENHIME\ =\ 5436,}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ CHR\_MIRACLE\_TOU\ =\ 5465,}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ CHR\_SANADA\_TOURIN\ =\ 5494,}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ CHR\_PIGU\_GELICIAM\ =\ 5523,}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ CHR\_FREYA\_IDUN\ =\ 5552,}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ CHR\_ROLEX\_GADRAS\ =\ 5581,}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ CHR\_ORUORE\_THE\_3RD\ =\ 5610,}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ CHR\_HUNTY\_KALAR\ =\ 5639,}
+\DoxyCodeLine{00036\ \ \ \ \ \};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsys43vm_1_1_c_jaffa_v_m}{CJaffaVM}}}
+\DoxyCodeLine{00039\ \ \ \ \ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ pad\_0000[16];\ \textcolor{comment}{//0x0000}}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ uint32\_t\ mod\_base;\ \textcolor{comment}{//0x0010}}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ pad\_0014[152];\ \textcolor{comment}{//0x0014}}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsys43vm_1_1_c_function_array}{CFunctionArray}}*\ func\_arr;\ \textcolor{comment}{//0x00AC}}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ pad\_00B0[208];\ \textcolor{comment}{//0x00B0}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsys43vm_1_1_c_jaffa_v_m}{CJaffaVM}}*\ cjaffavm;\ \textcolor{comment}{//0x0180}}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsys43vm_1_1_c_page_array}{CPageArray}}*\ cpage\_arr;\ \textcolor{comment}{//0x0184}}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ pad\_0188[156];\ \textcolor{comment}{//0x0188}}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsys43vm_1_1_v_m___i_p}{VM\_IP}}*\ vm\_ip;\ \textcolor{comment}{//0x0224}}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsys43vm_1_1_bytecode_segment}{BytecodeSegment}}*\ bytecode\_segment;\ \textcolor{comment}{//0x0228}}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ pad\_022C[8];\ \textcolor{comment}{//0x022C}}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ uint32\_t\ exit\_condition;\ \textcolor{comment}{//0x0234}}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ pad\_0238[24];\ \textcolor{comment}{//0x0238}}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsys43vm_1_1_v_m___topmost}{VM\_Topmost}}*\ vm\_topmost;\ \textcolor{comment}{//0x0250}}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ pad\_0254[1028];\ \textcolor{comment}{//0x0254}}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsys43vm_1_1_v_m___callstack}{VM\_Callstack}}*\ vm\_callstack;\ \textcolor{comment}{//0x0658}}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ pad\_065C[3236];\ \textcolor{comment}{//}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classsys43vm_1_1_c_jaffa_v_m}{CJaffaVM}}\ \mbox{\hyperlink{classsys43vm_1_1_c_jaffa_v_m_a97d096e19ca777bd60c53e6a06c45ff4}{GetInstance}}();}
+\DoxyCodeLine{00060\ \ \ \ \ \};\ \textcolor{comment}{//Size:\ 0x1300}}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{static\_assert}(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{classsys43vm_1_1_c_jaffa_v_m}{CJaffaVM}})\ ==\ 0x1300);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsys43vm_1_1_character}{Character}}}
+\DoxyCodeLine{00064\ \ \ \ \ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ uint32\_t\ nID;\ \textcolor{comment}{//0x0000}}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ pad\_0004[36];\ \textcolor{comment}{//0x0004}}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ uint32\_t\ Cur\_EVD;\ \textcolor{comment}{//0x0028}}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ uint32\_t\ Max\_EVD;\ \textcolor{comment}{//0x002C}}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ uint32\_t\ Cur\_PRY;\ \textcolor{comment}{//0x0030}}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ uint32\_t\ Max\_PRY;\ \textcolor{comment}{//0x0034}}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ uint32\_t\ Cur\_AMR;\ \textcolor{comment}{//0x0038}}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ uint32\_t\ Max\_AMR;\ \textcolor{comment}{//0x003C}}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ uint32\_t\ Cur\_HP;\ \textcolor{comment}{//0x0040}}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ uint32\_t\ Max\_HP;\ \textcolor{comment}{//0x0044}}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ uint32\_t\ Cur\_SP;\ \textcolor{comment}{//0x0048}}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ uint32\_t\ Max\_SP;\ \textcolor{comment}{//0x004C}}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ uint32\_t\ Cur\_TCT;\ \textcolor{comment}{//0x0050}}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ uint32\_t\ Max\_TCT;\ \textcolor{comment}{//0x0054}}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ pad\_0058[32];\ \textcolor{comment}{//0x0058}}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ uint32\_t\ Min\_ATK;\ \textcolor{comment}{//0x0078}}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ uint32\_t\ Max\_ATK;\ \textcolor{comment}{//0x007C}}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ uint32\_t\ Abs\_ATK;\ \textcolor{comment}{//0x0080}}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ uint32\_t\ Resist;\ \textcolor{comment}{//0x0084}}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ uint32\_t\ Move;\ \textcolor{comment}{//0x0088}}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ uint32\_t\ Range;\ \textcolor{comment}{//0x008C}}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ uint32\_t\ Direct\_Hit;\ \textcolor{comment}{//0x0090}}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ uint32\_t\ SPD;\ \textcolor{comment}{//0x0094}}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ pad\_0098[248];\ \textcolor{comment}{//0x0098}}
+\DoxyCodeLine{00090\ \ \ \ \ \};\ \textcolor{comment}{//Size:\ 0x0190}}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keyword}{static\_assert}(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{classsys43vm_1_1_character}{Character}})\ ==\ 0x190);}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsys43vm_1_1_v_m___i_p}{VM\_IP}}}
+\DoxyCodeLine{00094\ \ \ \ \ \{}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ uint16\_t\ bytecode;\ \textcolor{comment}{//0x0000}}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ uint32\_t\ arg;}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \textcolor{comment}{//uint16\_t\ arg1;\ //0x0002}}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \textcolor{comment}{//uint16\_t\ arg2;\ //0x0004}}
+\DoxyCodeLine{00100\ \ \ \ \ \};\ \textcolor{comment}{//Size:\ 0x0006}}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keyword}{static\_assert}(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{classsys43vm_1_1_v_m___i_p}{VM\_IP}})\ ==\ 0x8);}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsys43vm_1_1_v_m___topmost}{VM\_Topmost}}}
+\DoxyCodeLine{00104\ \ \ \ \ \{}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ uint32\_t\ top;\ \textcolor{comment}{//0x0000}}
+\DoxyCodeLine{00107\ \ \ \ \ \};\ \textcolor{comment}{//Size:\ 0x0004}}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keyword}{static\_assert}(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{classsys43vm_1_1_v_m___topmost}{VM\_Topmost}})\ ==\ 0x4);}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsys43vm_1_1_c_page_array}{CPageArray}}}
+\DoxyCodeLine{00111\ \ \ \ \ \{}
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsys43vm_1_1_c_page}{CPage}}*\ arr[5700];\ \textcolor{comment}{//0x0000}}
+\DoxyCodeLine{00114\ \ \ \ \ \};\ \textcolor{comment}{//Size:\ 0x5910}}
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keyword}{static\_assert}(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{classsys43vm_1_1_c_page_array}{CPageArray}})\ ==\ 0x5910);}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsys43vm_1_1_c_function_array}{CFunctionArray}}}
+\DoxyCodeLine{00118\ \ \ \ \ \{}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ pad\_0000[72];\ \textcolor{comment}{//0x0000}}
+\DoxyCodeLine{00121\ \ \ \ \ \};\ \textcolor{comment}{//Size:\ 0x0048}}
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keyword}{static\_assert}(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{classsys43vm_1_1_c_function_array}{CFunctionArray}})\ ==\ 0x48);}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsys43vm_1_1_bytecode_segment}{BytecodeSegment}}}
+\DoxyCodeLine{00125\ \ \ \ \ \{}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ pad\_0000[68];\ \textcolor{comment}{//0x0000}}
+\DoxyCodeLine{00128\ \ \ \ \ \};\ \textcolor{comment}{//Size:\ 0x0044}}
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keyword}{static\_assert}(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{classsys43vm_1_1_bytecode_segment}{BytecodeSegment}})\ ==\ 0x44);}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsys43vm_1_1_v_m___callstack}{VM\_Callstack}}}
+\DoxyCodeLine{00132\ \ \ \ \ \{}
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ uint32\_t\ return\_to;\ \textcolor{comment}{//0x0000}}
+\DoxyCodeLine{00135\ \ \ \ \ \};\ \textcolor{comment}{//Size:\ 0x0004}}
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keyword}{static\_assert}(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{classsys43vm_1_1_v_m___callstack}{VM\_Callstack}})\ ==\ 0x4);}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsys43vm_1_1_c_page}{CPage}}}
+\DoxyCodeLine{00139\ \ \ \ \ \{\ }
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ pad\_0000[8];\ \textcolor{comment}{//0x0000}}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ uintptr\_t*\ Value;\ \textcolor{comment}{//0x0008}}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ pad\_000C[100];\ \textcolor{comment}{//0x000C}}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ \ \ \ \ \};\ \textcolor{comment}{//Size:\ 0x0070}}
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keyword}{static\_assert}(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{classsys43vm_1_1_c_page}{CPage}})\ ==\ 0x70);}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ \}}
+
+\end{DoxyCode}

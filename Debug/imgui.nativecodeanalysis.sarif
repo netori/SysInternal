@@ -1,0 +1,4073 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "C33011",
+          "message": {
+            "text": "Unchecked upper bound for enum key used as index.."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                },
+                "region": {
+                  "startLine": 8320,
+                  "startColumn": 29,
+                  "endLine": 8320,
+                  "endColumn": 50
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ImGui::GetKeyData",
+                  "decoratedName": "?GetKeyData@ImGui@@YAPAUImGuiKeyData@@W4ImGuiKey@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 8310,
+                            "startColumn": 22
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 8312,
+                            "startColumn": 19
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 8312,
+                            "startColumn": 24
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 8315,
+                            "startColumn": 13
+                          }
+                        },
+                        "message": {
+                          "text": "Branching based on condition 'key & 63488'. 'false' branch is taken"
+                        }
+                      },
+                      "kinds": [
+                        "Branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 8319,
+                            "startColumn": 5
+                          }
+                        },
+                        "message": {
+                          "text": "Branching based on condition '0 <= key'. 'true' branch is taken\nEnum value 'key' is checked for lower bound."
+                        }
+                      },
+                      "kinds": [
+                        "Combination"
+                      ],
+                      "importance": "essential"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 8319,
+                            "startColumn": 5
+                          }
+                        },
+                        "message": {
+                          "text": "Branching based on condition 'key < 652'. 'false' branch is taken\nEnum value 'key' is checked for lower bound."
+                        }
+                      },
+                      "kinds": [
+                        "Combination"
+                      ],
+                      "importance": "essential"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 8319,
+                            "startColumn": 5
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 8319,
+                            "startColumn": 5
+                          }
+                        },
+                        "message": {
+                          "text": "Branching based on condition '0'. 'false' branch is taken"
+                        }
+                      },
+                      "kinds": [
+                        "Branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 8319,
+                            "startColumn": 5
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 8319,
+                            "startColumn": 5
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 8320,
+                            "startColumn": 20
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 8320,
+                            "startColumn": 20
+                          }
+                        },
+                        "message": {
+                          "text": "Branching based on condition 'result.IsLegacyKey'. 'true' branch is taken"
+                        }
+                      },
+                      "kinds": [
+                        "Branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 8320,
+                            "startColumn": 46
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C33010",
+          "message": {
+            "text": "Unchecked lower bound for enum source used as index.."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                },
+                "region": {
+                  "startLine": 9247,
+                  "startColumn": 5,
+                  "endLine": 9247,
+                  "endColumn": 37
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "GetInputSourceName",
+                  "decoratedName": "?GetInputSourceName@@YAPBDW4ImGuiInputSource@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 9243,
+                            "startColumn": 20
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 9245,
+                            "startColumn": 17
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 9245,
+                            "startColumn": 40
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 9246,
+                            "startColumn": 5
+                          }
+                        },
+                        "message": {
+                          "text": "Branching based on condition '1'. 'true' branch is taken"
+                        }
+                      },
+                      "kinds": [
+                        "Branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 9246,
+                            "startColumn": 5
+                          }
+                        },
+                        "message": {
+                          "text": "Branching based on condition '0 <= source'. 'false' branch is taken\nEnum value 'source' is checked for upper bound."
+                        }
+                      },
+                      "kinds": [
+                        "Combination"
+                      ],
+                      "importance": "essential"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 9246,
+                            "startColumn": 5
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 9246,
+                            "startColumn": 5
+                          }
+                        },
+                        "message": {
+                          "text": "Branching based on condition '0'. 'false' branch is taken"
+                        }
+                      },
+                      "kinds": [
+                        "Branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 9246,
+                            "startColumn": 5
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 9246,
+                            "startColumn": 5
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 9247,
+                            "startColumn": 5
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6011",
+          "message": {
+            "text": "Dereferencing NULL pointer 'viewport'. "
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                },
+                "region": {
+                  "startLine": 14082,
+                  "startColumn": 5,
+                  "endLine": 14082,
+                  "endColumn": 5
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ImGui::DestroyViewport",
+                  "decoratedName": "?DestroyViewport@ImGui@@YAXPAUImGuiViewportP@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14066,
+                            "startColumn": 19
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14067,
+                            "startColumn": 14
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14067,
+                            "startColumn": 37
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14069,
+                            "startColumn": 22
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14070,
+                            "startColumn": 30
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14072,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14073,
+                            "startColumn": 31
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14067,
+                            "startColumn": 63
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14067,
+                            "startColumn": 37
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14069,
+                            "startColumn": 22
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14070,
+                            "startColumn": 30
+                          }
+                        },
+                        "message": {
+                          "text": "'viewport' may be NULL (Skip this branch)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14072,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14073,
+                            "startColumn": 31
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14067,
+                            "startColumn": 63
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14067,
+                            "startColumn": 37
+                          }
+                        },
+                        "message": {
+                          "text": "Exit this loop, ('window_n<g.Windows.Size' is false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14075,
+                            "startColumn": 18
+                          }
+                        },
+                        "message": {
+                          "text": "Skip this branch, (assume '<branch condition>' is false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14079,
+                            "startColumn": 5
+                          }
+                        },
+                        "message": {
+                          "text": "Skip this branch, (assume '<branch condition>' is false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14080,
+                            "startColumn": 26
+                          }
+                        },
+                        "message": {
+                          "text": "'viewport' is an In/Out argument to 'ImGui::DestroyPlatformWindow' (declared at c:\\users\\h8940\\documents\\github\\sysinternal\\imgui_internal.h:3000)"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14081,
+                            "startColumn": 5
+                          }
+                        },
+                        "message": {
+                          "text": "Enter this loop, (assume '<branch condition>')"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14082,
+                            "startColumn": 5
+                          }
+                        },
+                        "message": {
+                          "text": "Skip this loop, (assume '<branch condition>' is false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14082,
+                            "startColumn": 5
+                          }
+                        },
+                        "message": {
+                          "text": "'viewport' is dereferenced, but may still be NULL"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6011",
+          "message": {
+            "text": "Dereferencing NULL pointer 'window->Viewport'. "
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                },
+                "region": {
+                  "startLine": 14210,
+                  "startColumn": 13,
+                  "endLine": 14210,
+                  "endColumn": 74
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ImGui::WindowSelectViewport",
+                  "decoratedName": "?WindowSelectViewport@ImGui@@YAXPAUImGuiWindow@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14090,
+                            "startColumn": 19
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14091,
+                            "startColumn": 22
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14092,
+                            "startColumn": 48
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14095,
+                            "startColumn": 21
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14096,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14101,
+                            "startColumn": 27
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14104,
+                            "startColumn": 71
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14110,
+                            "startColumn": 73
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14125,
+                            "startColumn": 10
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14126,
+                            "startColumn": 32
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14133,
+                            "startColumn": 53
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14140,
+                            "startColumn": 31
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14145,
+                            "startColumn": 20
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14149,
+                            "startColumn": 44
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14153,
+                            "startColumn": 77
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14163,
+                            "startColumn": 14
+                          }
+                        },
+                        "message": {
+                          "text": "'window->Viewport' may be NULL"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ],
+                      "importance": "essential"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14164,
+                            "startColumn": 13
+                          }
+                        },
+                        "message": {
+                          "text": "Skip this branch, (assume '<branch condition>' is false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14169,
+                            "startColumn": 26
+                          }
+                        },
+                        "message": {
+                          "text": "Enter this branch, (assume 'window->Viewport==0')"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14170,
+                            "startColumn": 13
+                          }
+                        },
+                        "message": {
+                          "text": "Skip this branch, (assume '<branch condition>' is false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14174,
+                            "startColumn": 9
+                          }
+                        },
+                        "message": {
+                          "text": "Enter this branch, (assume '!lock_viewport')"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14176,
+                            "startColumn": 19
+                          }
+                        },
+                        "message": {
+                          "text": "Skip this branch, (assume 'flags' is false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14188,
+                            "startColumn": 144
+                          }
+                        },
+                        "message": {
+                          "text": "Skip this branch, (assume '<branch condition>' is false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14206,
+                            "startColumn": 65
+                          }
+                        },
+                        "message": {
+                          "text": "Enter this branch, (assume '<branch condition>')"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14210,
+                            "startColumn": 56
+                          }
+                        },
+                        "message": {
+                          "text": "'window->Viewport' is dereferenced, but may still be NULL"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6011",
+          "message": {
+            "text": "Dereferencing NULL pointer 'window'. See line 14091 for an earlier location where this can occur"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                },
+                "region": {
+                  "startLine": 14215,
+                  "startColumn": 5,
+                  "endLine": 14215,
+                  "endColumn": 56
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ImGui::WindowSelectViewport",
+                  "decoratedName": "?WindowSelectViewport@ImGui@@YAXPAUImGuiWindow@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14090,
+                            "startColumn": 19
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14091,
+                            "startColumn": 22
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14092,
+                            "startColumn": 48
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14095,
+                            "startColumn": 21
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14096,
+                            "startColumn": 9
+                          }
+                        },
+                        "message": {
+                          "text": "Skip this branch, (assume '<branch condition>' is false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14101,
+                            "startColumn": 27
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14104,
+                            "startColumn": 71
+                          }
+                        },
+                        "message": {
+                          "text": "Skip this branch, (assume '<branch condition>' is false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14110,
+                            "startColumn": 73
+                          }
+                        },
+                        "message": {
+                          "text": "Skip this branch, (assume '<branch condition>' is false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14125,
+                            "startColumn": 10
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14126,
+                            "startColumn": 32
+                          }
+                        },
+                        "message": {
+                          "text": "Skip this branch, (assume '<branch condition>' is false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14133,
+                            "startColumn": 53
+                          }
+                        },
+                        "message": {
+                          "text": "Skip this branch, (assume '<branch condition>' is false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14140,
+                            "startColumn": 31
+                          }
+                        },
+                        "message": {
+                          "text": "Skip this branch, (assume '<branch condition>' is false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14145,
+                            "startColumn": 20
+                          }
+                        },
+                        "message": {
+                          "text": "Skip this branch, (assume 'flags' is false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14149,
+                            "startColumn": 44
+                          }
+                        },
+                        "message": {
+                          "text": "'window' is an In/Out argument to 'ImGui::GetWindowAlwaysWantOwnViewport' (declared on line 1083)"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14149,
+                            "startColumn": 44
+                          }
+                        },
+                        "message": {
+                          "text": "Skip this branch, (assume '<branch condition>' is false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14153,
+                            "startColumn": 77
+                          }
+                        },
+                        "message": {
+                          "text": "Skip this branch, (assume '<branch condition>' is false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14163,
+                            "startColumn": 14
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14164,
+                            "startColumn": 13
+                          }
+                        },
+                        "message": {
+                          "text": "Skip this branch, (assume '<branch condition>' is false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14169,
+                            "startColumn": 26
+                          }
+                        },
+                        "message": {
+                          "text": "Enter this branch, (assume 'window->Viewport==0')"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14170,
+                            "startColumn": 13
+                          }
+                        },
+                        "message": {
+                          "text": "'window' is an In/Out argument to 'ImGui::UpdateTryMergeWindowIntoHostViewport' (declared on line 1081)"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14170,
+                            "startColumn": 13
+                          }
+                        },
+                        "message": {
+                          "text": "Enter this branch, (assume '<branch condition>')"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14171,
+                            "startColumn": 30
+                          }
+                        },
+                        "message": {
+                          "text": "'window' is an In/Out argument to 'ImGui::AddUpdateViewport' (declared on line 1075)"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14174,
+                            "startColumn": 9
+                          }
+                        },
+                        "message": {
+                          "text": "Enter this branch, (assume '!lock_viewport')"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14176,
+                            "startColumn": 19
+                          }
+                        },
+                        "message": {
+                          "text": "Skip this branch, (assume 'flags' is false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14188,
+                            "startColumn": 144
+                          }
+                        },
+                        "message": {
+                          "text": "Skip this branch, (assume '<branch condition>' is false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14206,
+                            "startColumn": 65
+                          }
+                        },
+                        "message": {
+                          "text": "Enter this branch, (assume '<branch condition>')"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14210,
+                            "startColumn": 56
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 14215,
+                            "startColumn": 27
+                          }
+                        },
+                        "message": {
+                          "text": "'window' is dereferenced, but may still be NULL"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6011",
+          "message": {
+            "text": "Dereferencing NULL pointer 'node'. See line 15220 for an earlier location where this can occur"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                },
+                "region": {
+                  "startLine": 15309,
+                  "startColumn": 9,
+                  "endLine": 15309,
+                  "endColumn": 40
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ImGui::DockContextProcessDock",
+                  "decoratedName": "?DockContextProcessDock@ImGui@@YAXPAUImGuiContext@@PAUImGuiDockRequest@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 15182,
+                            "startColumn": 5
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 15183,
+                            "startColumn": 5
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 15185,
+                            "startColumn": 19
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 15186,
+                            "startColumn": 5
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 15188,
+                            "startColumn": 18
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 15189,
+                            "startColumn": 18
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 15190,
+                            "startColumn": 20
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 15191,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 15194,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 15197,
+                            "startColumn": 13
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 15198,
+                            "startColumn": 20
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 15199,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 15211,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 15213,
+                            "startColumn": 31
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 15217,
+                            "startColumn": 14
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 15219,
+                            "startColumn": 14
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 15220,
+                            "startColumn": 19
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 15221,
+                            "startColumn": 20
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 15222,
+                            "startColumn": 43
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 15230,
+                            "startColumn": 14
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 15231,
+                            "startColumn": 19
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 15242,
+                            "startColumn": 24
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 15244,
+                            "startColumn": 14
+                          }
+                        },
+                        "message": {
+                          "text": "'node' may be NULL (Skip this branch)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 15309,
+                            "startColumn": 38
+                          }
+                        },
+                        "message": {
+                          "text": "'node' is dereferenced, but may still be NULL"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6011",
+          "message": {
+            "text": "Dereferencing NULL pointer 'node->TabBar'. "
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                },
+                "region": {
+                  "startLine": 15537,
+                  "startColumn": 13,
+                  "endLine": 15537,
+                  "endColumn": 81
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ImGui::DockNodeAddWindow",
+                  "decoratedName": "?DockNodeAddWindow@ImGui@@YAXPAUImGuiDockNode@@PAUImGuiWindow@@_N@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 15496,
+                            "startColumn": 19
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 15496,
+                            "startColumn": 38
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 15497,
+                            "startColumn": 15
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 15503,
+                            "startColumn": 5
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 15504,
+                            "startColumn": 5
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 15509,
+                            "startColumn": 61
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 15512,
+                            "startColumn": 28
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 15513,
+                            "startColumn": 34
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 15514,
+                            "startColumn": 22
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 15515,
+                            "startColumn": 20
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 15516,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 15517,
+                            "startColumn": 30
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 15521,
+                            "startColumn": 34
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 15532,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 15534,
+                            "startColumn": 26
+                          }
+                        },
+                        "message": {
+                          "text": "'node->TabBar' may be NULL (Enter this branch)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 15536,
+                            "startColumn": 30
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 15537,
+                            "startColumn": 41
+                          }
+                        },
+                        "message": {
+                          "text": "'node->TabBar' is dereferenced, but may still be NULL"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C28182",
+          "message": {
+            "text": "Dereferencing NULL pointer. 'node' contains the same NULL value as 'info->CentralNode' did. See line 15707 for an earlier location where this can occur"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                },
+                "region": {
+                  "startLine": 15721,
+                  "startColumn": 9,
+                  "endLine": 15721,
+                  "endColumn": 27
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "DockNodeFindInfo",
+                  "decoratedName": "?DockNodeFindInfo@@YAXPAUImGuiDockNode@@PAUImGuiDockNodeTreeInfo@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 15707,
+                            "startColumn": 28
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 15713,
+                            "startColumn": 28
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 15715,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 15716,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 15717,
+                            "startColumn": 27
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 15719,
+                            "startColumn": 41
+                          }
+                        },
+                        "message": {
+                          "text": "'node' may be NULL (Skip this branch)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 15721,
+                            "startColumn": 27
+                          }
+                        },
+                        "message": {
+                          "text": "Skip this branch, (assume 'node->ChildNodes[0]' is false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 15721,
+                            "startColumn": 27
+                          }
+                        },
+                        "message": {
+                          "text": "'node' is dereferenced, but may still be NULL"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6011",
+          "message": {
+            "text": "Dereferencing NULL pointer 'merge_lead_child'. "
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                },
+                "region": {
+                  "startLine": 17046,
+                  "startColumn": 5,
+                  "endLine": 17046,
+                  "endColumn": 50
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ImGui::DockNodeTreeMerge",
+                  "decoratedName": "?DockNodeTreeMerge@ImGui@@YAXPAUImGuiContext@@PAUImGuiDockNode@@1@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 17020,
+                            "startColumn": 19
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 17021,
+                            "startColumn": 20
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 17022,
+                            "startColumn": 20
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 17023,
+                            "startColumn": 5
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 17024,
+                            "startColumn": 5
+                          }
+                        },
+                        "message": {
+                          "text": "'merge_lead_child' may be NULL (Enter this loop)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 17025,
+                            "startColumn": 48
+                          }
+                        },
+                        "message": {
+                          "text": "Skip this branch, (assume '<branch condition>' is false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 17030,
+                            "startColumn": 5
+                          }
+                        },
+                        "message": {
+                          "text": "Skip this branch, (assume '<branch condition>' is false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 17032,
+                            "startColumn": 12
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 17033,
+                            "startColumn": 27
+                          }
+                        },
+                        "message": {
+                          "text": "'merge_lead_child' is an In/Out argument to 'ImGui::DockNodeMoveChildNodes' (declared on line 14723)"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 17034,
+                            "startColumn": 9
+                          }
+                        },
+                        "message": {
+                          "text": "Skip this branch, (assume 'child_0' is false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 17039,
+                            "startColumn": 9
+                          }
+                        },
+                        "message": {
+                          "text": "Enter this branch, (assume 'child_1')"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 17041,
+                            "startColumn": 28
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 17042,
+                            "startColumn": 41
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 17044,
+                            "startColumn": 34
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 17045,
+                            "startColumn": 34
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 17046,
+                            "startColumn": 32
+                          }
+                        },
+                        "message": {
+                          "text": "'merge_lead_child' is dereferenced, but may still be NULL"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6011",
+          "message": {
+            "text": "Dereferencing NULL pointer 'node'. "
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                },
+                "region": {
+                  "startLine": 18056,
+                  "startColumn": 9,
+                  "endLine": 18056,
+                  "endColumn": 33
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ImGui::BeginDocked",
+                  "decoratedName": "?BeginDocked@ImGui@@YAXPAUImGuiWindow@@PA_N@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 18006,
+                            "startColumn": 19
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 18007,
+                            "startColumn": 19
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 18010,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 18012,
+                            "startColumn": 16
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 18013,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 18024,
+                            "startColumn": 14
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 18025,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 18026,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 18027,
+                            "startColumn": 13
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 18035,
+                            "startColumn": 20
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 18036,
+                            "startColumn": 14
+                          }
+                        },
+                        "message": {
+                          "text": "'node' may be NULL (Skip this branch)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 18038,
+                            "startColumn": 29
+                          }
+                        },
+                        "message": {
+                          "text": "Skip this branch, (assume 'window->DockId!=0&&node==0' is false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 18056,
+                            "startColumn": 30
+                          }
+                        },
+                        "message": {
+                          "text": "'node' is dereferenced, but may still be NULL"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C28182",
+          "message": {
+            "text": "Dereferencing NULL pointer. 'window->DockNode' contains the same NULL value as 'node' did. See line 18056 for an earlier location where this can occur"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                },
+                "region": {
+                  "startLine": 18127,
+                  "startColumn": 18,
+                  "endLine": 18127,
+                  "endColumn": 50
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ImGui::BeginDocked",
+                  "decoratedName": "?BeginDocked@ImGui@@YAXPAUImGuiWindow@@PA_N@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 18006,
+                            "startColumn": 19
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 18007,
+                            "startColumn": 19
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 18010,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 18012,
+                            "startColumn": 16
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 18013,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 18024,
+                            "startColumn": 14
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 18025,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 18026,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 18027,
+                            "startColumn": 13
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 18035,
+                            "startColumn": 20
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 18036,
+                            "startColumn": 14
+                          }
+                        },
+                        "message": {
+                          "text": "'node' may be NULL (Skip this branch)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 18038,
+                            "startColumn": 29
+                          }
+                        },
+                        "message": {
+                          "text": "Skip this branch, (assume 'window->DockId!=0&&node==0' is false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 18056,
+                            "startColumn": 30
+                          }
+                        },
+                        "message": {
+                          "text": "Skip this branch, (assume '<branch condition>' is false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 18068,
+                            "startColumn": 14
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 18068,
+                            "startColumn": 35
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 18069,
+                            "startColumn": 43
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 18068,
+                            "startColumn": 75
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 18068,
+                            "startColumn": 35
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 18069,
+                            "startColumn": 43
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 18068,
+                            "startColumn": 75
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 18068,
+                            "startColumn": 35
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 18074,
+                            "startColumn": 26
+                          }
+                        },
+                        "message": {
+                          "text": "Skip this branch, (assume 'node->HostWindow==0' is false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 18084,
+                            "startColumn": 5
+                          }
+                        },
+                        "message": {
+                          "text": "Enter this loop, (assume '!!((node->HostWindow))')"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 18085,
+                            "startColumn": 5
+                          }
+                        },
+                        "message": {
+                          "text": "Enter this loop, (assume '!!((node->IsLeafNode()))')"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 18086,
+                            "startColumn": 5
+                          }
+                        },
+                        "message": {
+                          "text": "Enter this loop, (assume '<branch condition>')"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 18087,
+                            "startColumn": 17
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 18090,
+                            "startColumn": 65
+                          }
+                        },
+                        "message": {
+                          "text": "Skip this branch, (assume '<branch condition>' is false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 18097,
+                            "startColumn": 21
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 18098,
+                            "startColumn": 22
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 18099,
+                            "startColumn": 32
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 18100,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 18101,
+                            "startColumn": 31
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 18102,
+                            "startColumn": 30
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 18103,
+                            "startColumn": 27
+                          }
+                        },
+                        "message": {
+                          "text": "Skip this branch, (assume 'node->MergedFlags' is false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 18107,
+                            "startColumn": 29
+                          }
+                        },
+                        "message": {
+                          "text": "Skip this branch, (assume 'node->VisibleWindow==window' is false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 18111,
+                            "startColumn": 5
+                          }
+                        },
+                        "message": {
+                          "text": "Enter this loop, (assume '<branch condition>')"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 18112,
+                            "startColumn": 19
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 18113,
+                            "startColumn": 32
+                          }
+                        },
+                        "message": {
+                          "text": "Skip this branch, (assume '<branch condition>' is false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 18116,
+                            "startColumn": 23
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 18120,
+                            "startColumn": 22
+                          }
+                        },
+                        "message": {
+                          "text": "Skip this branch, (assume '<branch condition>' is false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 18123,
+                            "startColumn": 71
+                          }
+                        },
+                        "message": {
+                          "text": "Skip this branch, (assume '<branch condition>' is false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 18127,
+                            "startColumn": 18
+                          }
+                        },
+                        "message": {
+                          "text": "'node' is dereferenced, but may still be NULL"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C33010",
+          "message": {
+            "text": "Unchecked lower bound for enum key used as index.."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                },
+                "region": {
+                  "startLine": 19248,
+                  "startColumn": 95,
+                  "endLine": 19248,
+                  "endColumn": 119
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ImGui::ShowMetricsWindow::funcs::IsLegacyNativeDupe",
+                  "decoratedName": "?IsLegacyNativeDupe@funcs@?KM@??ShowMetricsWindow@ImGui@@YAXPA_N@Z@SA_NW4ImGuiKey@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 19248,
+                            "startColumn": 40
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 19248,
+                            "startColumn": 86
+                          }
+                        },
+                        "message": {
+                          "text": "Branching based on condition 'key < 512'. 'true' branch is taken\nEnum value 'key' is checked for upper bound."
+                        }
+                      },
+                      "kinds": [
+                        "Combination"
+                      ],
+                      "importance": "essential"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 19248,
+                            "startColumn": 95
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 19248,
+                            "startColumn": 115
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.35.32216.1",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///C:/Users/h8940/Documents/GitHub/SysInternal/imgui.cpp"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "8fab7f3405c508bb257b0e6da699c437da9a68c9fbe307bdb57605b788e856a8"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/h8940/documents/github/sysinternal/imgui.h"
+          },
+          "hashes": {
+            "sha-256": "d716e3ff359d27cc6755608aae4ff779efac837b197555d64090b994c245d108"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/h8940/documents/github/sysinternal/imconfig.h"
+          },
+          "hashes": {
+            "sha-256": "8d887055ad9b411a677d7c873f693a511522eb9473353f563b597db9142398c9"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/h8940/documents/github/sysinternal/imgui_internal.h"
+          },
+          "hashes": {
+            "sha-256": "ada162cc5146fe029285fe21dbbaf86c9c830a1931363c6a6ea0bcfb77dcb9ec"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/h8940/documents/github/sysinternal/imstb_textedit.h"
+          },
+          "hashes": {
+            "sha-256": "3f4cf71a2b771d938f62ce4225df3ebe429b334fcdb3b89f1fedf43eeb0a3e1e"
+          }
+        }
+      ]
+    }
+  ]
+}

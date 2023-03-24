@@ -1,16 +1,16 @@
-// This header is the interface between GUI and the backend.
-// Most functions are just wrappers for the backend.
-#pragma once
-#include "framework.h"
-#include <cstdint>
+/*****************************************************************//**
+ * \file   Interface.h
+ * \brief  This headers contains wrappers for the backend that are used by the GUI.
+ * 
+ * \author netori
+ * \date   March 2023
+ *********************************************************************/
 
-#include "CPage.h"
-#include "System4VM.h"
+#pragma once
+#include <cstdint>
 
 namespace Interface
 {
-	//static const wchar_t* moduleName = L"System4VM.dll";
-	static const HMODULE moduleBase = GetModuleHandle(NULL);
 	uintptr_t GetCJaffaVM();
 	uintptr_t GetCPage(int);
 	wchar_t* GetCPageName(int);
