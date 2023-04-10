@@ -6,10 +6,10 @@
 
 <h4 align="center">An internal hack that interfaces with the System4 virtual machine of RanceIX</a>.</h4>
 <p align="center">
-  <a href="##key-features">Key Features</a> •
-  <a href="##how-to-use">How To Use</a> •
-  <a href="##specifications">Specifications</a> •
-  <a href="##related">Related</a>
+  <a href="#key-features">Key Features</a> •
+  <a href="#how-to-use">How To Use</a> •
+  <a href="#specifications">Specifications</a> •
+  <a href="#related">Related</a>
 </p>
 
 ## Key Features
