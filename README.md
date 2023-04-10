@@ -18,7 +18,7 @@
 * Lock System VM Execution Cycle (WIP)
 
 # How To Use
-Build the Release with MSVC (v143).
+The Release build is a DLL that can be injected into the target process.
 
 # Specifications
 * Game Engine: System43
