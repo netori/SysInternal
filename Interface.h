@@ -8,10 +8,12 @@
 
 #pragma once
 #include <cstdint>
+#include "sys43vm.h"
 
 namespace Interface
 {
-	uintptr_t GetCJaffaVM();
+	uintptr_t GetCJaffaVMAdress();
 	uintptr_t GetCPage(int);
+	sys43vm::Character* GetCharacter(int);
 	wchar_t* GetCPageName(int);
 };

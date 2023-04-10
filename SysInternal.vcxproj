@@ -151,7 +151,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\Downloads\minhook-master\include\MinHook.h" />
-    <ClInclude Include="CPage.h" />
     <ClInclude Include="Data.h" />
     <ClInclude Include="ImGui\imconfig.h" />
     <ClInclude Include="ImGui\imgui.h" />

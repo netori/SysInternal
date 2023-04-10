@@ -20,7 +20,7 @@ void UI::Setup()
 	}
 	catch (const std::exception& e)
 	{
-		MessageBoxA(NULL, e.what(), "Fatal Error", MB_OK);
+		MessageBoxA(nullptr, e.what(), "Fatal Error", MB_OK);
 		abort();
 	}
 	UI::CreateRenderTarget();
@@ -40,12 +40,12 @@ void UI::SetupWindow(const wchar_t* windowClassName)
 	windowClass.cbClsExtra = 0L;
 	windowClass.cbWndExtra = 0L;
 	windowClass.hInstance = GetModuleHandle(NULL);
-	windowClass.hIcon = NULL;
-	windowClass.hCursor = NULL;
-	windowClass.hbrBackground = NULL;
-	windowClass.lpszMenuName = NULL;
+	windowClass.hIcon = nullptr;
+	windowClass.hCursor = nullptr;
+	windowClass.hbrBackground = nullptr;
+	windowClass.lpszMenuName = nullptr;
 	windowClass.lpszClassName = windowClassName;
-	windowClass.hIconSm = NULL;
+	windowClass.hIconSm = nullptr;
 	if (!RegisterClassEx(&windowClass))
 	{
 		throw std::runtime_error("Failed to register window class");
@@ -63,7 +63,7 @@ void UI::SetupWindow(const wchar_t* windowClassName)
 void UI::DestroyWindow()
 {
 	::DestroyWindow(UI::hWnd);
-	UnregisterClass(static_cast<LPCWSTR>(UI::windowClass.lpszClassName), windowClass.hInstance);
+	UnregisterClass(UI::windowClass.lpszClassName, windowClass.hInstance);
 }
 
 void UI::CreateDeviceD3D(HWND hWnd)
@@ -164,7 +164,7 @@ void UI::SetupImGui(HWND hwnd, ID3D11Device* device, ID3D11DeviceContext* device
 	io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
 	io.ConfigFlags |= ImGuiConfigFlags_ViewportsEnable;
 	// Setup the ImGui style
-	ImGui::StyleColorsDark();
+	ImGui::StyleColorsClassic();
 	ImGuiStyle& style = ImGui::GetStyle();
 	if (io.ConfigFlags & ImGuiConfigFlags_ViewportsEnable)
 	{
@@ -223,7 +223,7 @@ void UI::Render()
 		ImGui::NewFrame();
 		// Draw the ImGuiFrame to backbuffer.
 		{
-			ImGui::ShowDemoWindow();
+			//ImGui::ShowDemoWindow();
 			if (!System4Editor::Render())
 				UI::isOpen = false;
 		}

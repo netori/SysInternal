@@ -6,7 +6,7 @@
 
 namespace System4Editor
 {
-	struct ExampleAppLog;
+	struct SystemAppLog;
 
 	static bool isOpen = true;
 
@@ -18,7 +18,6 @@ namespace System4Editor
 
 	bool Render();
 	void ShowMainWindow();
-	void ShowExampleAppConstrainedResize(bool*);
-	void ShowExampleAppLog(bool*);
-	void ShowBytecodeEditor(bool*);
+	void ShowAppLog(bool*);
+	void ShowBytecodeEditor(bool*); // feature to be added in the future.
 };

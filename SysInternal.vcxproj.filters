@@ -51,9 +51,6 @@
     <ClInclude Include="System4Editor.h">
       <Filter>Header Files\GUI</Filter>
     </ClInclude>
-    <ClInclude Include="CPage.h">
-      <Filter>Header Files\System</Filter>
-    </ClInclude>
     <ClInclude Include="Interface.h">
       <Filter>Header Files\GUI</Filter>
     </ClInclude>

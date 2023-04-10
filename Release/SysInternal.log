@@ -1,6 +1,7 @@
-﻿  Generating code
-  0 of 2545 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+﻿  UI.cpp
+  Generating code
+  863 of 1941 functions (44.5%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
+    216 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
-LINK : fatal error LNK1201: error writing to program database 'C:\Users\h8940\Documents\GitHub\SysInternal\Release\SysInternal.pdb'; check for insufficient disk space, invalid path, or insufficient privilege
+  SysInternal.vcxproj -> C:\Users\h8940\Documents\GitHub\SysInternal\Release\SysInternal.dll
